@@ -7,10 +7,13 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2018/19
 * [![Shiny](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/karmenzupancic/APPR-2018-19/master?urlpath=shiny/APPR-2018-19/projekt.Rmd) Shiny
 * [![RStudio](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/karmenzupancic/APPR-2018-19/master?urlpath=rstudio) RStudio
 
-## Tematika
+## Teroristični napadi po svetu
 
-Izbrali si boste temo, s katero se bo vaš projekt ukvarjal.
-Tukaj boste napisali, kje ste dobili podatke, ter kakšen je vaš cilj.
+V projektu bom analizirala teroristične napade po svetu. Najprej se bom osredotočila na njihovo frekvenco v posameznih delih sveta, nato pa bom napade podrobneje analizirala glede na regijo, državo, število žrtev, tip tarče (vojaška, vladna institucija, turisti, letališče, politična stranka,...), tip uporabljenega orožja (kemično, nuklearno, eksploziv, vozilo,..) in način napada (atentat, prevzem letala, zajemanje talcev, samomorilski napadi, napad infrastrukture,...).
+
+
+Kot vir podatkov bom uporabila [GTD](#http://apps.start.umd.edu/gtd/) (Global terrorism database) in [START](#https://www.start.umd.edu/data-and-tools/start-datasets) (National consortium for the study of terrorism and responses to terrorism).
+
 
 ## Program
 
