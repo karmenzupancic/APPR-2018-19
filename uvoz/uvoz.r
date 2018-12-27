@@ -1,21 +1,18 @@
 # 2. faza: Uvoz podatkov
+library(readr)
+library(reshape2)
+library(dplyr)
 
-sl <- locale("sl", decimal_mark=",", grouping_mark=".")
+#sl <- locale("sl", decimal_mark="", grouping_mark="")
 
-# #regije <- ("Australasia & Oceania", "Central America & Caribbean", "Central Asia"
-#            East Asia
-#            Eastern Europe
-#            Middle East & North Africa
-#            North America
-#            South America
-#            South Asia
-#            Southeast Asia
-#            Sub-Saharan Africa
-#            Western Europe)
-# 
+# številke stolpcev 2,3,5,11,13,16,17
+# colnames(tabela) <- ("datum", "drzava", "povzrocitelj", "zrtve", "tarca", "regija", "tip napada")
 
-T <- read_csv("GTDdata.csv", col_names=c(regije),
-              skip=1, na="", locale=locale(encoding="Windows-1250", 
-                                           decimal_mark = "",
-                                           grouping_mark = "."),
-              n_max = 14)  
+K <- read_csv("podatki/GTDdata.csv", 
+               na="", quote = "\"", locale=locale(encoding="Windows-1250", 
+                                           #decimal_mark = ".",
+                                           #grouping_mark = ""
+                                           )
+              )  
+
+#izpuščeni stolpci columns(tabela) - c(1,4,6,7,8,9,10,12,14,15,18,19,20,21,22,23)
