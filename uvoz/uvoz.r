@@ -8,8 +8,8 @@ library(dplyr)
 # številke stolpcev 2,3,5,11,13,16,17
 # colnames(tabela) <- ("datum", "drzava", "povzrocitelj", "zrtve", "tarca", "regija", "tip napada")
 
-K <- read_csv("podatki/GTDdata.csv", 
-               na="", quote = "\"", locale=locale(encoding="Windows-1250", 
+K <- read_csv("podatki/GTD-Export.csv", 
+               na="", locale=locale(encoding="Windows-1250", 
                                            #decimal_mark = ".",
                                            #grouping_mark = ""
                                            )
