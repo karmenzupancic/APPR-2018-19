@@ -16,3 +16,5 @@ K <- read_csv("podatki/GTD-Export.csv",
               )  
 
 #izpuščeni stolpci columns(tabela) - c(1,4,6,7,8,9,10,12,14,15,18,19,20,21,22,23)
+K.brez <- K[c(-1,-4,-6,-7,-8,-9,-10,-12,-14,-15,-18,-19,-20,-21,-22,-23)]
+K %>% select("DATE", "COUNTRY")
