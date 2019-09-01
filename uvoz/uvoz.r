@@ -8,13 +8,19 @@ library(dplyr)
 # številke stolpcev 2,3,5,11,13,16,17
 # colnames(tabela) <- ("datum", "drzava", "povzrocitelj", "zrtve", "tarca", "regija", "tip napada")
 
-K <- read_csv("podatki/GTD-Export.csv", 
-               na="", locale=locale(encoding="Windows-1250", 
-                                           #decimal_mark = ".",
-                                           #grouping_mark = ""
-                                           )
-              )  
+podatki_napadi <- read_csv("podatki/terrorist-incidents.csv", 
+               na="", locale=locale(encoding="Windows-1250"),skip=1, col_names=c("drzava", "koda", "leto", "stevilo")
+                                                          )
 
-#izpuščeni stolpci columns(tabela) - c(1,4,6,7,8,9,10,12,14,15,18,19,20,21,22,23)
-K.brez <- K[c(-1,-4,-6,-7,-8,-9,-10,-12,-14,-15,-18,-19,-20,-21,-22,-23)]
-K %>% select("DATE", "COUNTRY")
+podatki_napadi$koda <- NULL
+
+podatki_zrtve <- read_csv("podatki/fatalities-from-terrorism.csv", 
+                          na="", locale=locale(encoding="Windows-1250"),skip=1, col_names=c("drzava", "koda", "leto", "zrtve")
+)  
+podatki_zrtve$koda <- NULL
+
+podatki_poskodbe <- read_csv("podatki/injuries-from-terrorism.csv", 
+                             na="", locale=locale(encoding="Windows-1250"),skip=1, col_names=c("drzava", "koda", "leto", "poskodbe")
+)  
+podatki_poskodbe$koda <- NULL
+
