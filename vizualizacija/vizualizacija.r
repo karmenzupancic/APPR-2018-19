@@ -1,13 +1,20 @@
 # 3. faza: Vizualizacija podatkov
 
-# Uvozimo zemljevid.
-zemljevid <- uvozi.zemljevid("http://baza.fmf.uni-lj.si/OB.zip", "OB",
-                             pot.zemljevida="OB", encoding="Windows-1250")
-levels(zemljevid$OB_UIME) <- levels(zemljevid$OB_UIME) %>%
-  { gsub("Slovenskih", "Slov.", .) } %>% { gsub("-", " - ", .) }
-zemljevid$OB_UIME <- factor(zemljevid$OB_UIME, levels=levels(obcine$obcina))
-zemljevid <- fortify(zemljevid)
 
-# Izračunamo povprečno velikost družine
-povprecja <- druzine %>% group_by(obcina) %>%
-  summarise(povprecje=sum(velikost.druzine * stevilo.druzin) / sum(stevilo.druzin))
+graf.svetovni.napadi <- ggplot(podatki_napadi %>% filter(drzava == "World")) + aes(x=leto, y=stevilo, group=drzava)+ geom_point() + geom_line()
+
+pomozna_tabela1 <- podatki_napadi %>% filter(drzava == "World")
+pomozna_tabela1$drzava <- NULL
+names(pomozna_tabela1)[names(pomozna_tabela1)=="stevilo"] <- "stevilo_svet"
+
+pomozna_tabela1 <- right_join(pomozna_tabela1, podatki_napadi %>% filter(drzava == "Iraq"))
+
+
+pomozna_tabela1$drzava <- NULL
+names(pomozna_tabela1)[names(pomozna_tabela1)=="stevilo"] <- "stevilo_iraq"
+
+pomozna_tabela1 <- mutate(pomozna_tabela1, procent = stevilo_iraq / stevilo_svet)
+
+graf.iraq.procenti <- ggplot(pomozna_tabela1) + aes(x=leto, y=procent, group=TRUE) + geom_point() + geom_line()
+
+
