@@ -22,7 +22,14 @@ source("lib/rstudio.r", encoding="UTF-8")
 
 # Izbira teme
 
-Izbrala sm teroristicne napade.
+Za temo projekta sem si izbrala teroristične napade po svetu.
+V poročilu bom podrobneje analizirala teroristične napade po svetu od leta 1970 do 2017 in njihovo frekvenco. 
+
+Teroristični napad je definiran kot organizirano nasilno dejanje usmerjeno proti civilistom oziroma civilni ustanovi v politične namene. Motivacij pa je več, na primer ustrahovanje, politična ali verska netoleranca, pridobivanje mednarodne pozornosti, nacionalizem,...
+
+V zadnjih letih imamo občutek, da se je število terorističnih napadov v Evropi močno povečalo, vendar to ne pomeni nujno, da je tu tudi največ žrtev terorizma in da število ni naraslo tudi drugod.  Osredotočila se bom torej na porast terorizma v Evropi ter na Bližnjem vzhodu, ter jih proporcionalno primerjala.
+
+Moja hipoteza je, da je število napadov po Evropskih mestih res narastlo, proporcionalno z  državami Bližnjega vzhoda, kot so Iraq, Afganistan in Iran pa upadlo.
 
 
 ***
@@ -36,12 +43,12 @@ source("uvoz/uvoz.r", encoding="UTF-8")
 Uvozili smo podatke o občinah v obliki CSV s statističnega urada ter v obliki HTML
 z Wikipedije. Podatke imamo v treh razpredelnicah v obliki *tidy data*.
 
-1. `podatki_napadi` - podatki o številu napadov v posamezni državi od leta 1970 do 2017
+1. `podatki_napadi` - podatki o številu terorističnih napadov v posamezni državi od leta 1970 do 2017
   - `drzava` - spremenljivka: ime države,
   - `leto` - spremenljivka: leto,
   - `stevilo` - meritev: število napadov.
 
-2. `podatki_zrtve` - podatki o številu žrtev v posamezni državi od leta 1970 do 2017
+2. `podatki_zrtve` - podatki o številu žrtev terorističnih napadov v posamezni državi od leta 1970 do 2017
   - `drzava` - spremenljivka: ime države,
   - `leto` - spremenljivka: leto,
   - `zrtve` - meritev: število žrtev.
