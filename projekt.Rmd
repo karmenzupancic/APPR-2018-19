@@ -53,7 +53,7 @@ z Wikipedije. Podatke imamo v treh razpredelnicah v obliki *tidy data*.
   - `leto` - spremenljivka: leto,
   - `zrtve` - meritev: število žrtev.
   
-3. `podatki_poskodbe` - podatki o številu poškodovanih ob posameznem napadu v državi od leta 1970 do 2017
+3. `podatki_poskodbe` - podatki o številu poškodovanih (ne usodne poškodbe) v posameznem letu od 1970 do 2017 za državo
   - `drzava` - spremenljivka: ime države,
   - `leto` - spremenljivka: leto,
   - `poskodbe` - meritev: poškodovani.
