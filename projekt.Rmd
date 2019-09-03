@@ -58,4 +58,7 @@ z Wikipedije. Podatke imamo v treh razpredelnicah v obliki *tidy data*.
   - `leto` - spremenljivka: leto,
   - `poskodbe` - meritev: poškodovani.
   
+  
+  
+  
 
