@@ -59,6 +59,38 @@ z Wikipedije. Podatke imamo v treh razpredelnicah v obliki *tidy data*.
   - `poskodbe` - meritev: poškodovani.
   
   
-  
-  
+# Analiza in vizualizacija podatkov
 
+```{r vizualizacija, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+source("vizualizacija/vizualizacija.r", encoding="UTF-8")
+```
+
+```{r graf1, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+graf.svetovni.napadi + xlab("Leto") + ylab("Število") + ggtitle("Število terorističnih napadov po svetu od 1990 do 2017")
+```  
+  
+```{r graf2, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+graf.evropa.napadi + xlab("Leto") + ylab("Število") + ggtitle("Število terorističnih napadov v Evropi od 1990 do 2017") + scale_color_discrete(name="Država", labels=c("Vzhodna Evropa", "Zahodna Evropa"))
+```  
+
+```{r graf3, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+graf.vzhod.delez + xlab("Leto") + ylab("Delež od svetovnih napadov") + ggtitle("Delež svetovnih napadov, ki jih predstavljajo napadi na Bližnjem vzhodu") 
+```
+
+```{r graf4, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+graf_zrtev_poskodovanih_evropa + xlab("Število žrtev") + ylab("Število poškodovanih") + ggtitle("Graf povezave med številom poškodovanih in številom žrtev v Zahodni Evropi") + labs(color = "Leto")
+```
+
+```{r graf5, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+graf_zrtev_poskodovanih_vzhod + xlab("Število žrtev") + ylab("Število poškodovanih") + ggtitle("Graf povezave med številom poškodovanih in \nštevilom žrtev v državah Bližnjega vzhoda") + labs(color = "Leto")
+```
+
+# Napredna analiza podatkov
+
+```{r analiza, echo=FALSE, message=FALSE, warning=FALSE}
+source("analiza/analiza.r", encoding="UTF-8")
+```
+
+```{r graf6, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+zemljevid_sveta + ggtitle("Grupiranje po številu poškodoanih, žrtev in napadov v 2017") + labs(fill = "Skupine")
+```
