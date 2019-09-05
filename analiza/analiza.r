@@ -1,7 +1,7 @@
 # 4. faza: Analiza podatkov
 
-podatki <- right_join(podatki_napadi, podatki_poskodbe)
-podatki <- right_join(podatki, podatki_zrtve)
+podatki <- left_join(podatki_napadi, podatki_poskodbe)
+podatki <- left_join(podatki, podatki_zrtve)
 podatki <- filter(podatki, leto==2017)
 
 vektor <- c("South Asia", "South America", "Western Europe", "World", "Western Sahara", "Sub-Saharan Africa","Southeast Asia", "North America","Middle East & North Africa", "Eastern Europe", "East Asia", "Central America & Caribbean",  "Central Asia", "Australasia & Oceania")
@@ -26,5 +26,5 @@ podatki.norm <- podatki %>% scale()
 
 k <- kmeans(podatki.norm, 5, nstart=1000)
 skupine <- data.frame(drzave=row.names(podatki.norm), skupine=factor(k$cluster))
-zemljevid_sveta <- ggplot(right_join(zemljevid,skupine, by=c("SOVEREIGNT"="drzave"))) + geom_polygon() + 
+zemljevid_sveta <- ggplot(left_join(zemljevid,skupine, by=c("SOVEREIGNT"="drzave"))) + geom_polygon() + 
   aes(x=long, y=lat, group=group, fill=skupine) + xlab("") + ylab("") + theme_minimal()

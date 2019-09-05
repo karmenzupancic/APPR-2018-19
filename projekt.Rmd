@@ -69,13 +69,20 @@ source("vizualizacija/vizualizacija.r", encoding="UTF-8")
 graf.svetovni.napadi + xlab("Leto") + ylab("Število") + ggtitle("Število terorističnih napadov po svetu od 1990 do 2017")
 ```  
   
+Iz grafa lahko vidimo, da se je število terorističnih napadov po svetu do leta 1992 precej enakomerno zviševalo, nakar je nekaj let upadalo, potem pa spet strmo narastlo z ekstremom v letu 2014. Zadnjih nekaj let pa se to število spet zmanjšuje.
+
 ```{r graf2, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
 graf.evropa.napadi + xlab("Leto") + ylab("Število") + ggtitle("Število terorističnih napadov v Evropi od 1990 do 2017") + scale_color_discrete(name="Država", labels=c("Vzhodna Evropa", "Zahodna Evropa"))
 ```  
 
+Podatki za Evropo nam povejo, da se države na vzhodnem delu precej razlikujejo od zahodnih držav. Kljub temu, da imamo v zadnjih letih občutek, da se je število terorističnih napadov v državah Zahodne Evrope kot so Francija in Nemčija povečalo, je to v resnici upadlo in ima obraten trend kot države Vzhodne Evrope. V teh so se teroristični napadi začeli povečevati takrat, ko so v zahodno evropskih državah upadli. 
+
 ```{r graf3, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
 graf.vzhod.delez + xlab("Leto") + ylab("Delež od svetovnih napadov") + ggtitle("Delež svetovnih napadov, ki jih predstavljajo napadi na Bližnjem vzhodu") 
 ```
+
+Podatki za države Bližnjega vzhoda nam ne povedo le, da je tam čedalje več terorističnih napadov, temveč da se veča tudi delež, ki ga ti napadi predstavljajo od vseh terorističnih napadov. Torej velik delež povečanja svetovnih napadov lahko pripišemo povečanemu številu napadov v državah kot so Irak in Sirija.  
+
 
 ```{r graf4, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
 graf_zrtev_poskodovanih_evropa + xlab("Število žrtev") + ylab("Število poškodovanih") + ggtitle("Graf povezave med številom poškodovanih in številom žrtev v Zahodni Evropi") + labs(color = "Leto")
@@ -85,6 +92,12 @@ graf_zrtev_poskodovanih_evropa + xlab("Število žrtev") + ylab("Število poško
 graf_zrtev_poskodovanih_vzhod + xlab("Število žrtev") + ylab("Število poškodovanih") + ggtitle("Graf povezave med številom poškodovanih in \nštevilom žrtev v državah Bližnjega vzhoda") + labs(color = "Leto")
 ```
 
+Število žrtev in število poškodovanih v terorističnih napadih za posamezno leto je seveda močno odvisno od števila napadov v tistem letu. Zanima nas pa, če se teroristični napadi razlikujejo po nasilnosti- če napadi za sabo pustijo več preživelih kot smrtnih žrtev, glede na lokacijo.
+Pri grafih povezav med številom žrtev in številom poškodovanih v terorističnih napadih opazimo razliko med državami Zahodne Evrope in državami Bližnjega vzhoda. Pri prvih se število poškodovanih spreminja počasi ter se skoraj omeji v primerjavi s številom žrtev. Ponavadi pa bo tudi precej večje od števila umrlih. Torej bi lahko rekli da so evropski napadi tipično manj uničujoči, in za sabo pustijo več poškodovanih kot umrlih. Če pa je število žrtev močno povečano, potem pa enako ne velja za število poškodovanih. Razporejenost točk bi lahko aproksimirali z logaritemsko funkcijo.
+V državah Bližnjega vzhoda pa je število poškodovanih precej podobno številu smrtnih žrtev. Kar pomeni, da se ob povečanju ševila poškodovanih v napadih poveča tudi število smrtnih žrtev. 
+
+Pri grafih lahko opazimo tudi nevarnost napadov skozi leta. Pri prvem vidimo da so bili napadi hujši v preteklosti, in pri drugem kasneje oz. sedaj, kar pa je v skladu z podatki o številu terorističnih napadov na teh lokacijah.
+
 # Napredna analiza podatkov
 
 ```{r analiza, echo=FALSE, message=FALSE, warning=FALSE}
@@ -92,5 +105,8 @@ source("analiza/analiza.r", encoding="UTF-8")
 ```
 
 ```{r graf6, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-zemljevid_sveta + ggtitle("Grupiranje po številu poškodoanih, žrtev in napadov v 2017") + labs(fill = "Skupine")
+zemljevid_sveta + ggtitle("Grupiranje po številu poškodovanih, žrtev in napadov v 2017") + labs(fill = "Skupine")
 ```
+
+Naredila sem tudi napredno analizo podatkov, kjer graf razvrščanja podatkov glede na število poškodovanih v terorističnih napadih, število žrtev in število vseh terorističnih napadov v letu 2017 za posamezno državo, države razporedi v 5 skupin. Afganistan se uvrsti v čisto svojo skupino, prav tako Irak, zaradi drugačnosti napadov od ostalih, naslednjo skupino predstavljajo Indija, Pakistan, Somalija, Nigerija in še nekatere manjše države, Združene države in Velika Britanija sta v skupini z nekaterimi afriškimi državami, Evropa pa je po podatkih v terorističnih napadih precej podobna preostalemu svetu.
+
