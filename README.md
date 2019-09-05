@@ -9,10 +9,10 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2018/19
 
 ## Teroristični napadi po svetu
 
-V projektu bom analizirala teroristične napade po svetu. Najprej se bom osredotočila na njihovo frekvenco v posameznih delih sveta v zadnjih letih in preteklosti, nato pa bom napade podrobneje analizirala glede na regijo, državo, število žrtev, tip tarče (vojaška, vladna institucija, turisti, letališče, politična stranka,...), tip uporabljenega orožja (kemično, nuklearno, eksploziv, vozilo,...) in način napada (atentat, prevzem letala, zajemanje talcev, samomorilski napadi, napad infrastrukture,...).
+V projektu bom analizirala teroristične napade po svetu. Osredotočila se bom na Zahodno Evropo, saj se o napadih tu najbolj poroča v medijih in na države z Bližnjega vzhoda za primerjavo. Primerjala bom število žrtev terorističnih napadov, število poškodovanih, in število vseh terorističnih napadov od leta 1970 do leta 2017.
 
 
-Kot vir podatkov bom uporabila [GTD](http://apps.start.umd.edu/gtd/) (Global terrorism database) in [START](https://www.start.umd.edu/data-and-tools/start-datasets) (National consortium for the study of terrorism and responses to terrorism).
+Kot vir podatkov bom uporabila [GTD](http://apps.start.umd.edu/gtd/) (Global terrorism database) in [Our World in Data](https://ourworldindata.org/terrorism).
 
 
 ## Program
