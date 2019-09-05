@@ -96,7 +96,7 @@ graf_zrtev_poskodovanih_vzhod + xlab("Število žrtev") + ylab("Število poškod
 
 Število žrtev in število poškodovanih v terorističnih napadih za posamezno leto je seveda močno odvisno od števila napadov v tistem letu. Zanima nas pa, če se teroristični napadi razlikujejo po nasilnosti- če napadi za sabo pustijo več preživelih kot smrtnih žrtev, glede na lokacijo.
 Pri grafih povezav med številom žrtev in številom poškodovanih v terorističnih napadih opazimo razliko med državami Zahodne Evrope in državami Bližnjega vzhoda. Pri prvih se število poškodovanih spreminja počasi ter se skoraj omeji v primerjavi s številom žrtev. Ponavadi pa bo tudi precej večje od števila umrlih. Torej bi lahko rekli da so evropski napadi tipično manj uničujoči, in za sabo pustijo več poškodovanih kot umrlih. Če pa je število žrtev močno povečano, potem pa enako ne velja za število poškodovanih. Razporejenost točk bi lahko aproksimirali z logaritemsko funkcijo.
-V državah Bližnjega vzhoda pa je število poškodovanih precej podobno številu smrtnih žrtev. Kar pomeni, da se ob povečanju ševila poškodovanih v napadih poveča tudi število smrtnih žrtev. 
+V državah Bližnjega vzhoda je število poškodovanih nekoliko večje od števila smrtnih žrtev, vendar se število poškodovanih veča proporcionalno z večanjem števila žrtev.
 
 Pri grafih lahko opazimo tudi nevarnost napadov skozi leta. Pri prvem vidimo da so bili napadi hujši v preteklosti, in pri drugem kasneje oz. sedaj, kar pa je v skladu z podatki o številu terorističnih napadov na teh lokacijah.
 
