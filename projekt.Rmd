@@ -77,17 +77,17 @@ Iz grafa lahko vidimo, da se je število terorističnih napadov po svetu do leta
 graf.evropa.napadi + xlab("Leto") + ylab("Število") + ggtitle("Število terorističnih napadov v Evropi od 1990 do 2017") + scale_color_discrete(name="Država", labels=c("Vzhodna Evropa", "Zahodna Evropa"))
 ```  
 
-Podatki za Evropo nam povejo, da se države na vzhodnem delu precej razlikujejo od zahodnih držav. Kljub temu, da imamo v zadnjih letih občutek, da se je število terorističnih napadov v državah Zahodne Evrope kot so Francija in Nemčija povečalo, je to v resnici upadlo in ima obraten trend kot države Vzhodne Evrope. V teh so se teroristični napadi začeli povečevati takrat, ko so v zahodno evropskih državah upadli. 
+Podatki za Evropo nam povejo, da se države na vzhodnem delu precej razlikujejo od zahodnih držav. Kljub temu, da imamo v zadnjih letih občutek, da se je število terorističnih napadov v državah Zahodne Evrope kot so Francija in Nemčija močno povečalo, je to v resnici manjše kot je bilo v preteklosti. Nekoliko je narastlo sele v zadnjih letih. Nasploh pa imajo teroristični napadi v Zahodni Evropi obraten trend kot države Vzhodne Evrope. V teh so se teroristični napadi začeli povečevati takrat, ko so v zahodno evropskih državah upadli. 
 
 ```{r graf3, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-graf.vzhod.delez + xlab("Leto") + ylab("Delež od svetovnih napadov") + ggtitle("Delež svetovnih napadov, ki jih predstavljajo napadi na Bližnjem vzhodu") 
+graf.vzhod.delez + xlab("Leto") + ylab("Delež od svetovnih napadov") + ggtitle("Delež svetovnih napadov, ki jih predstavljajo napadi na \nBližnjem vzhodu") 
 ```
 
 Podatki za države Bližnjega vzhoda nam ne povedo le, da je tam čedalje več terorističnih napadov, temveč da se veča tudi delež, ki ga ti napadi predstavljajo od vseh terorističnih napadov. Torej velik delež povečanja svetovnih napadov lahko pripišemo povečanemu številu napadov v državah kot so Irak in Sirija.  
 
 
 ```{r graf4, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-graf_zrtev_poskodovanih_evropa + xlab("Število žrtev") + ylab("Število poškodovanih") + ggtitle("Graf povezave med številom poškodovanih in številom žrtev v Zahodni Evropi") + labs(color = "Leto")
+graf_zrtev_poskodovanih_evropa + xlab("Število žrtev") + ylab("Število poškodovanih") + ggtitle("Graf povezave med številom poškodovanih in številom žrtev v \nZahodni Evropi") + labs(color = "Leto")
 ```
 
 ```{r graf5, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
