@@ -34,6 +34,7 @@ Moja hipoteza je, da je število napadov po Evropskih mestih res narastlo, propo
 
 ***
 
+
 # Obdelava, uvoz in čiščenje podatkov
 
 ```{r uvoz, echo=FALSE, message=FALSE}
@@ -57,6 +58,7 @@ z Wikipedije. Podatke imamo v treh razpredelnicah v obliki *tidy data*.
   - `drzava` - spremenljivka: ime države,
   - `leto` - spremenljivka: leto,
   - `poskodbe` - meritev: poškodovani.
+  
   
   
 # Analiza in vizualizacija podatkov
@@ -98,6 +100,7 @@ V državah Bližnjega vzhoda pa je število poškodovanih precej podobno števil
 
 Pri grafih lahko opazimo tudi nevarnost napadov skozi leta. Pri prvem vidimo da so bili napadi hujši v preteklosti, in pri drugem kasneje oz. sedaj, kar pa je v skladu z podatki o številu terorističnih napadov na teh lokacijah.
 
+
 # Napredna analiza podatkov
 
 ```{r analiza, echo=FALSE, message=FALSE, warning=FALSE}
@@ -109,4 +112,6 @@ zemljevid_sveta + ggtitle("Grupiranje po številu poškodovanih, žrtev in napad
 ```
 
 Naredila sem tudi napredno analizo podatkov, kjer graf razvrščanja podatkov glede na število poškodovanih v terorističnih napadih, število žrtev in število vseh terorističnih napadov v letu 2017 za posamezno državo, države razporedi v 5 skupin. Afganistan se uvrsti v čisto svojo skupino, prav tako Irak, zaradi drugačnosti napadov od ostalih, naslednjo skupino predstavljajo Indija, Pakistan, Somalija, Nigerija in še nekatere manjše države, Združene države in Velika Britanija sta v skupini z nekaterimi afriškimi državami, Evropa pa je po podatkih v terorističnih napadih precej podobna preostalemu svetu.
+
+Postavljeno hipotezo sem ovrgla sej se število terorističnih napadov v evropskih državah zmanjšuje, ne zvišuje, posledično pa se seveda zaradi večanja števila terorističnih napadov po svetu delež, ki ga predstavljajo napadi v Zahodni Evropi tudi zmanjšuje. 
 
